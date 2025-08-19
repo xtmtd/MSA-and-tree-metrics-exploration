@@ -25,9 +25,9 @@ options:
 
   -h, --help&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;show this help message and exit
   
-  --msa_dir MSA_DIR&emsp;&emsp;&emsp;&emsp;Directory containing MSA files (FASTA)
+  --msa_dir MSA_DIR&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Directory containing MSA files (FASTA)
 
-  --tree_dir TREE_DIR&emsp;&emsp;&emsp;&emsp;Directory containing tree files (Newick)
+  --tree_dir TREE_DIR&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Directory containing tree files (Newick)
 
   --msa_type {AA,DNA}&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;MSA type: AA (amino acid) or DNA (nucleotide). Required when --msa_dir is provided
 
