@@ -91,6 +91,8 @@ Launch the Shiny Application:
 
 &emsp;&emsp;\# Or Online Shiny server
 
+&emsp;&emsp;https://xtmtd.shinyapps.io/phylogenomics/
+
 &emsp;&emsp;http://124.222.255.151:3838/apps/phylogenomics/
 
 
