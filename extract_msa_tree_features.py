@@ -619,22 +619,22 @@ def create_parser():
         epilog="""
 Examples:
   # MSA features only
-  python extract_msa_tree_features.py --msa_dir /path/to/MSAs --msa_type DNA -o results.csv
+  python extract_msa_tree_features.py --msa_dir /path/to/MSAs --msa_type DNA -o results.csv -t 8
 
   # Tree features only  
-  python extract_msa_tree_features.py --tree_dir /path/to/trees -o results.csv
+  python extract_msa_tree_features.py --tree_dir /path/to/trees -o results.csv -t 8
 
   # Both MSA and tree features
-  python extract_msa_tree_features.py --msa_dir /path/to/MSAs --tree_dir /path/to/trees --msa_type DNA -o results.csv
+  python extract_msa_tree_features.py --msa_dir /path/to/MSAs --tree_dir /path/to/trees --msa_type DNA -o results.csv -t 8
 
   # Skip frequency statistics
-  python extract_msa_tree_features.py --msa_dir /path/to/MSAs --tree_dir /path/to/trees --msa_type DNA --skip_freq_statistics -o results.csv
+  python extract_msa_tree_features.py --msa_dir /path/to/MSAs --tree_dir /path/to/trees --msa_type DNA --skip_freq_statistics -o results.csv -t 8
 
   # With pseudo tree metrics
-  python extract_msa_tree_features.py --msa_dir /path/to/MSAs --msa_type DNA --pseudo_tree_metrics --fasttree /usr/bin/FastTree -o results.csv
+  python extract_msa_tree_features.py --msa_dir /path/to/MSAs --msa_type DNA --pseudo_tree_metrics --fasttree /usr/bin/FastTree -o results.csv -t 8
 
   # With outgroups and reference tree
-  python extract_msa_tree_features.py --msa_dir /path/to/MSAs --tree_dir /path/to/trees --msa_type DNA --outgroup_list outgroups.txt --ref_tree reference.tree -o results.csv
+  python extract_msa_tree_features.py --msa_dir /path/to/MSAs --tree_dir /path/to/trees --msa_type DNA --outgroup_list outgroups.txt --ref_tree reference.tree -o results.csv -t 8
         """,
         formatter_class=argparse.RawDescriptionHelpFormatter
     )
