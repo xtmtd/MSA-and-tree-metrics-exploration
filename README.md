@@ -118,11 +118,11 @@ This function is enabled by the 'Enable Correlation Analysis' checkbox in the ma
 
 #### MSA Simulation Tab generates IQ-TREE simulation commands using various parameter sampling strategies:
 
-Complete empirical match: ensures parameter consistency by selecting all model parameters from the same empirical observation. This approach maintains natural covariances between parameters.
+&emsp;&emsp;(1) Complete empirical match: ensures parameter consistency by selecting all model parameters from the same empirical observation. This approach maintains natural covariances between parameters.
 
-Mixed empirical sampling: samples each parameter independently from empirical distributions, allowing exploration of parameter combinations not present in the original data.
+&emsp;&emsp;(2) Mixed empirical sampling: samples each parameter independently from empirical distributions, allowing exploration of parameter combinations not present in the original data.
 
-PDF-based estimation: creates continuous distributions from empirical data for selected parameters. 
+&emsp;&emsp;(3) PDF-based estimation: creates continuous distributions from empirical data for selected parameters. 
 
 The simulation tools allow researchers to generate IQ-TREE commands for phylogenomic data simulation using empirical parameter distributions extracted from real datasets. It implements three distinct parameter sampling strategies for generating realistic phylogenomic simulations. Each strategy represents a different approach to leveraging empirical data for simulation parameter selection. The simulation interface is organized into collapsible cards within the MSA Simulation tab, enabled by the 'Enable MSA Simulation' checkbox in the main sidebar. The interface adapts model component options based on the sequence type. For DNA sequences using the GTR model, the system implements flexible GTR rate parameter sourcing. PDF Comparison Plots generate side-by-side comparisons of empirical and simulated distributions.
 
