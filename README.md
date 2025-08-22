@@ -77,11 +77,11 @@ options:
 
 ## Interactive Analysis Platform
 
-The Interactive Analysis Platform is a comprehensive R Shiny web application that provides researchers with an intuitive interface for exploring phylogenomic datasets, performing statistical analysis, and generating MSA simulation commands. This document covers the overall architecture, core functionality, and technical implementation of the MSA_Tree_metrics_exploration.R application. The platform provides three main analytical capabilities through a tabbed interface, each with specialized tools and visualizations. For detailed information about specific components, see User Interface Components, Data Loading and Filtering, Statistical Analysis and Visualization, and MSA Simulation Tools. For information about preparing input data, see Feature Extraction Tool. The built-in DNA and AA empirical datasets collected relevant metrics for 733,430 and 232,115 MSAs, respectively. Most features have been generated from the above extract_msa_tree_features.py, except for Gamma shape, which could be mined from tree inference tools, e.g. FastTree or IQ-TREE.
+The Interactive Analysis Platform is a comprehensive R Shiny web application that provides researchers with an intuitive interface for exploring phylogenomic datasets, performing statistical analysis, and generating MSA simulation commands. This document covers the overall architecture, core functionality, and technical implementation of the MSA_Tree_metrics_exploration.R application. The platform provides three main analytical capabilities through a tabbed interface, each with specialized tools and visualizations. For detailed information about specific components, see User Interface Components, Data Loading and Filtering, Statistical Analysis and Visualization, and MSA Simulation Tools. For information about preparing input data, see Feature Extraction Tool. The built-in DNA and AA empirical datasets collected relevant metrics for 733,430 and 232,115 MSAs, respectively. Most features have been generated from the above extract_msa_tree_features.py, except for Gamma shape 'alpha', which could be mined from tree inference tools, e.g. FastTree or IQ-TREE.
 
 The Shiny application requires these R packages, which can be installed by:
 
-&emsp;&emsp;install.packages(c("data.table", "ggplot2", "purrr", "corrplot", "shiny", "bslib"))
+&emsp;&emsp;install.packages(c("data.table", "ggplot2", "purrr", "corrplot", "shiny", "bslib", "shinyjs"))
 
 Launch the Shiny Application:
 
@@ -89,7 +89,7 @@ Launch the Shiny Application:
 
 &emsp;&emsp;shiny::runApp("MSA_Tree_metrics_exploration.R")
 
-&emsp;&emsp;\# Or Online Shiny server (**For data exceeding 500,000 lines, the online server may crash due to insufficient memory on the cloud server. Please switch to the local version.**)
+&emsp;&emsp;\# Or Online Shiny server (**For large data exceeding 500,000 lines, the online server may crash due to insufficient memory on the cloud server. Please switch to the local version.**)
 
 &emsp;&emsp;http://124.222.255.151:3838/apps/phylogenomics/
 
@@ -114,7 +114,9 @@ The distribution analysis tab provides histogram visualization with density over
 
 This function is enabled by the 'Enable Correlation Analysis' checkbox in the main sidebar. The correlation analysis uses Spearman's rank correlation and provides hierarchical clustering visualization through the *corrplot* package. 
 
-<img width="2310" height="1094" alt="image" src="https://github.com/user-attachments/assets/f40b8034-bc66-4ff7-b163-6328ef9cd0de" />
+<img width="2178" height="1092" alt="image" src="https://github.com/user-attachments/assets/53d16723-8a92-4f0a-9ef7-af0ffdfa07e1" />
+
+
 
 #### MSA Simulation Tab generates IQ-TREE simulation commands using various parameter sampling strategies:
 
@@ -126,9 +128,11 @@ This function is enabled by the 'Enable Correlation Analysis' checkbox in the ma
 
 The simulation tools allow researchers to generate IQ-TREE commands for phylogenomic data simulation using empirical parameter distributions extracted from real datasets. It implements three distinct parameter sampling strategies for generating realistic phylogenomic simulations. Each strategy represents a different approach to leveraging empirical data for simulation parameter selection. The simulation interface is organized into collapsible cards within the MSA Simulation tab, enabled by the 'Enable MSA Simulation' checkbox in the main sidebar. The interface adapts model component options based on the sequence type. For DNA sequences using the GTR model, the system implements flexible GTR rate parameter sourcing. PDF Comparison Plots generate side-by-side comparisons of empirical and simulated distributions.
 
-<img width="2502" height="1080" alt="image" src="https://github.com/user-attachments/assets/0ee6d968-ff07-4b08-a178-23bbafbc1f3f" />
+<img width="2520" height="1094" alt="image" src="https://github.com/user-attachments/assets/f3dc0f1b-a75c-44a9-8763-125265583c14" />
 
-<img width="1562" height="614" alt="image" src="https://github.com/user-attachments/assets/0331004e-aaf8-4ce5-9c5f-2041eab70c7a" />
+
+<img width="2080" height="778" alt="image" src="https://github.com/user-attachments/assets/980fc98c-1379-4d26-a6d8-c8c597fbce37" />
+
 
 
 
