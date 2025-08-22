@@ -89,7 +89,7 @@ Launch the Shiny Application:
 
 &emsp;&emsp;shiny::runApp("MSA_Tree_metrics_exploration.R")
 
-&emsp;&emsp;\# Or Online Shiny server (**For data exceeding 500,000 lines, the web version may crash due to insufficient memory on the cloud server. Please switch to the local version.**)
+&emsp;&emsp;\# Or Online Shiny server (**For data exceeding 500,000 lines, the online server may crash due to insufficient memory on the cloud server. Please switch to the local version.**)
 
 &emsp;&emsp;http://124.222.255.151:3838/apps/phylogenomics/
 
