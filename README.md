@@ -81,7 +81,7 @@ The Interactive Analysis Platform is a comprehensive R Shiny web application tha
 
 The Shiny application requires these R packages, which can be installed by:
 
-&emsp;&emsp;install.packages(c("readr", "ggplot2", "dplyr", "shiny", "bslib", "corrplot"))
+&emsp;&emsp;install.packages(c("data.table", "ggplot2", "purrr", "corrplot", "shiny", "bslib"))
 
 Launch the Shiny Application:
 
